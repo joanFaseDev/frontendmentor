@@ -1,0 +1,167 @@
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;700&display=swap");
+/*----------------------------------------------------*/
+/* Modern CSS reset from Andy Bell */
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role="list"],
+ol[role="list"] {
+  list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+/*----------------------------------------------------*/
+:root {
+  /*Colors*/
+  --clr-primary-cyan: #66e2dc;
+  --clr-primary-red: #fa7453;
+  --clr-primary-orange: #ffb964;
+  --clr-neutral-black: #191826;
+  --clr-neutral-white: #fcfaf9;
+
+  --clr-paragraph: var(--clr-neutral-black);
+  --clr-paragraph-card: var(--clr-neutral-white);
+  --bg-clr-card: var(--clr-primary-red);
+
+  /*Typography*/
+  --ff-default: "IBM Plex Sans", sans-serif;
+  --fs-default: 16px;
+  --fs-18: 1.125rem;
+  --fs-20: 1.25rem;
+  --fs-24: 1.5rem;
+  --fs-26: 1.625rem;
+  --fs-28: 1.75rem;
+  --fs-32: 2rem;
+  --fs-40: 2.5rem;
+  --fs-48: 3rem;
+  --fs-62: 3.875rem;
+  --fs-64: 4rem;
+  --fs-65: 4.0625rem;
+  --fs-68: 4.25rem;
+  --fs-95: 5.9375rem;
+  --fs-111: 6.9375rem;
+  --fw-400: 400;
+  --fw-700: 700;
+
+  --fs-h1: var(--fs-40);
+  --fs-h2: var(--fs-32);
+  --fs-paragraph: var(--fs-default);
+  --fs-paragraph-card: var(--fs-18);
+  --fs-body: var(--fs-default);
+
+  --fw-paragraph: var(--fw-400);
+  --fw-heading: var(--fw-700);
+
+  --lh-h1: var(--fs-48);
+  --lh-h2: var(--fs-40);
+  --lh-paragraph: var(--fs-26);
+  --lh-paragraph-card: var(--fs-28);
+
+  --ls-heading: -0.45px;
+}
+
+html {
+  font-family: var(--ff-default);
+}
+
+body {
+  font-size: var(--fs-body);
+}
+
+header {
+  max-width: 80%;
+  padding: clamp(var(--fs-40), 1.188rem + 5.598vw, var(--fs-62))
+    clamp(var(--fs-24), 0.6054rem + 3.8168vw, 2.4375rem)
+    clamp(var(--fs-68), 1.6856rem + 10.9415vw, var(--fs-111));
+}
+
+h1 {
+  font-size: min(
+    clamp(var(--fs-40), 1.0687rem + 6.1069vw, var(--fs-64)),
+    var(--fs-64)
+  );
+  line-height: clamp(var(--fs-48), 2.0458rem + 4.0712vw, var(--fs-64));
+  margin-bottom: clamp(1.1875rem, 0.6508rem + 2.2901vw, var(--fs-28));
+}
+
+.margin-b-icon {
+  margin-bottom: clamp(var(--fs-65), 2.2734rem + 7.6336vw, var(--fs-95));
+}
+
+.fs-header-p {
+  font-size: clamp(var(--fs-default), 0.8807rem + 0.5089vw, var(--fs-18));
+}
+
+@media (min-width: 750px) {
+  body {
+    background-image: url(./assets/bg-pattern-1.svg);
+    background-position: right -2rem top -2rem;
+    background-size: 34% auto;
+    background-repeat: no-repeat;
+  }
+}
