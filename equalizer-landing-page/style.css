@@ -91,18 +91,22 @@ select {
   /*Typography*/
   --ff-default: "IBM Plex Sans", sans-serif;
   --fs-default: 16px;
+  --fs-12: 0.75rem;
   --fs-18: 1.125rem;
   --fs-20: 1.25rem;
   --fs-24: 1.5rem;
   --fs-26: 1.625rem;
   --fs-28: 1.75rem;
   --fs-32: 2rem;
+  --fs-36: 2.25rem;
   --fs-40: 2.5rem;
   --fs-48: 3rem;
+  --fs-52: 3.25rem;
   --fs-62: 3.875rem;
   --fs-64: 4rem;
   --fs-65: 4.0625rem;
   --fs-68: 4.25rem;
+  --fs-88: 5.5rem;
   --fs-95: 5.9375rem;
   --fs-111: 6.9375rem;
   --fw-400: 400;
@@ -127,41 +131,135 @@ select {
 
 html {
   font-family: var(--ff-default);
+  font-size: var(--fs-default);
 }
 
 body {
   font-size: var(--fs-body);
 }
 
-header {
-  max-width: 80%;
-  padding: clamp(var(--fs-40), 1.188rem + 5.598vw, var(--fs-62))
-    clamp(var(--fs-24), 0.6054rem + 3.8168vw, 2.4375rem)
-    clamp(var(--fs-68), 1.6856rem + 10.9415vw, var(--fs-111));
-}
-
 h1 {
-  font-size: min(
-    clamp(var(--fs-40), 1.0687rem + 6.1069vw, var(--fs-64)),
-    var(--fs-64)
-  );
-  line-height: clamp(var(--fs-48), 2.0458rem + 4.0712vw, var(--fs-64));
-  margin-bottom: clamp(1.1875rem, 0.6508rem + 2.2901vw, var(--fs-28));
+  font-size: var(--fs-40);
+  font-weight: var(--fw-700);
+  line-height: var(--fs-48);
+  letter-spacing: -0.45px;
+  margin-bottom: 19px;
 }
 
-.margin-b-icon {
-  margin-bottom: clamp(var(--fs-65), 2.2734rem + 7.6336vw, var(--fs-95));
+h2 {
+  font-size: var(--fs-32);
+  font-weight: var(--fw-700);
+  line-height: var(--fs-40);
+  margin-bottom: var(--fs-12);
 }
 
-.fs-header-p {
-  font-size: clamp(var(--fs-default), 0.8807rem + 0.5089vw, var(--fs-18));
+p {
+  font-size: var(--fs-default);
+  font-weight: var(--fw-400);
+  line-height: var(--fs-26);
 }
 
-@media (min-width: 750px) {
-  body {
-    background-image: url(./assets/bg-pattern-1.svg);
-    background-position: right -2rem top -2rem;
-    background-size: 34% auto;
-    background-repeat: no-repeat;
-  }
+button {
+  font-size: var(--fs-18);
+  font-weight: var(--fw-700);
+  line-height: var(--fs-32);
+  letter-spacing: -0.18px;
+  width: 100%;
+  border: 0;
+  border-radius: var(--fs-12);
+  padding: 15px 0;
+  margin-left: 6px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: color 0.5s cubic-bezier(0, 0.55, 0.45, 1),
+    background-color 0.5s cubic-bezier(0, 0.55, 0.45, 1);
+}
+
+.header {
+  padding: var(--fs-40) var(--fs-24) var(--fs-68);
+}
+
+/* Utility classes */
+.marg-right {
+  margin-right: var(--fs-default);
+}
+
+.marg-bot {
+  margin-bottom: var(--fs-default);
+}
+
+.marg-bot-65 {
+  margin-bottom: var(--fs-65);
+}
+
+.marg-amount {
+  margin: var(--fs-36) 0 var(--fs-32) 6px;
+}
+
+.marg-icon {
+  margin-right: 7.8px;
+}
+
+.flex {
+  display: flex;
+}
+
+.f-v-center {
+  align-items: center;
+}
+
+.fs-18 {
+  font-size: var(--fs-18);
+}
+
+.fs-20 {
+  font-size: var(--fs-20);
+}
+
+.fs-65 {
+  font-size: var(--fs-65);
+}
+
+.fw-700 {
+  font-weight: var(--fw-700);
+}
+
+.lh-28 {
+  line-height: var(--fs-28);
+}
+
+.lh-32 {
+  line-height: var(--fs-32);
+}
+
+.lh-52 {
+  line-height: var(--fs-52);
+}
+
+/* Blocks */
+.main__card {
+  color: var(--clr-neutral-white);
+  background-color: var(--clr-primary-red);
+  padding: var(--fs-48) var(--fs-36);
+  border-radius: 12px;
+}
+
+/* Exceptions */
+button[data-os="apple"] {
+  color: var(--clr-neutral-white);
+  background-color: var(--clr-neutral-black);
+}
+
+button[data-os="apple"]:hover {
+  background-color: var(--clr-primary-cyan);
+}
+
+button[data-os="android"] {
+  color: var(--clr-neutral-black);
+  background-color: var(--clr-neutral-white);
+}
+
+button[data-os="android"]:hover {
+  background-color: var(--clr-primary-orange);
 }
