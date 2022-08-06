@@ -32,16 +32,22 @@
         </p>
       </div>
     </header>
-    <main class="">
-      <div class="main__back"></div>
-      <div class="main__phone">
+    <main class="main [ marg-bot-64 ]">
+      <div class="main__back" data-grid-item="back">
+        <img
+          src="./assets/bg-pattern-2.svg"
+          alt="A pattern of different rond shapes with cyan, orange and white color."
+          class="back__img"
+        />
+      </div>
+      <div class="main__phone" data-grid-item="phone">
         <img
           src="./assets/illustration-app.png"
           alt="A smartphone using a music app."
           class="phone"
         />
       </div>
-      <section class="main__card">
+      <section class="main__card" data-grid-item="card">
         <h2 class="card__title">Premium EQ</h2>
         <p class="card__arg [ lh-28 fs-18 ]">
           Get expert-level control with a robust equalizer, volume mixer, and
@@ -70,16 +76,38 @@
         </button>
       </section>
     </main>
-
-    <!-- 
-
-
-  
-
-  
-  
-
-  All rights reserved © Equalizer 2021
-  Have any problems? Contact us via social media or email us at equalizer@example.com -->
+    <footer class="footer">
+      <div class="footer__wrapper [ marg-bot-32 ]">
+        <img
+          src="./assets/logo.svg"
+          alt="Logo of the brand representing the work 'equalizer' in lowercase."
+          class="footer__img"
+        />
+      </div>
+      <div class="footer__wrapper [ marg-bot-64 ]">
+        <p class="footer__copyrights">
+          All rights reserved © Equalizer 2021 <br />
+          Have any problems? Contact us via social media or email us at <br />
+          <span class="footer__email [ fw-700 ]">equalizer@example.com</span>
+        </p>
+      </div>
+      <div class="footer__wrapper [ flex flex-h-center ]">
+        <img
+          src="./assets/icon-facebook.svg"
+          alt="Facebook's icon, lowercase letter 'f' in a box."
+          class="footer__icon [ marg-right-20 ]"
+        />
+        <img
+          src="./assets/icon-instagram.svg"
+          alt="Instagram's icon, a styled camera."
+          class="footer__icon [ marg-right-20 ]"
+        />
+        <img
+          src="./assets/icon-twitter.svg"
+          alt="Twitter's icon, a styled bird viewed from profile."
+          class="footer__icon"
+        />
+      </div>
+    </footer>
   </body>
 </html>
