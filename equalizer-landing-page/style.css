@@ -76,6 +76,7 @@ select {
   }
 }
 /*----------------------------------------------------*/
+/*Global properties & mobile design*/
 :root {
   /*Colors*/
   --clr-primary-cyan: #66e2dc;
@@ -137,6 +138,8 @@ html {
 
 body {
   font-size: var(--fs-body);
+  background-image: url(./assets/bg-main-mobile.png);
+  background-position: center left;
 }
 
 h1 {
@@ -260,6 +263,10 @@ footer {
   line-height: var(--fs-52);
 }
 
+.pointer {
+  cursor: pointer;
+}
+
 /* Blocks */
 .main {
   display: grid;
@@ -324,5 +331,86 @@ section[data-grid-item="card"] {
   z-index: 100;
 }
 
+img[data-icon="social-media"] {
+  transition: filter 0.5s cubic-bezier(0, 0.55, 0.45, 1);
+}
+
+img[data-icon="social-media"]:hover {
+  filter: invert(48%) sepia(81%) saturate(874%) hue-rotate(329deg)
+    brightness(108%) contrast(96%);
+}
+
+/*Tablet Design*/
 @media (min-width: 600px) {
+  body {
+    background-image: url(./assets/bg-pattern-1.svg);
+    background-repeat: no-repeat;
+    background-position: top -2rem right -2rem;
+    background-size: auto 400px;
+  }
+
+  header {
+    /*Locally change some variable's value to indirectly modify some utility classes*/
+    --fs-65: var(--fs-95);
+    width: 77%;
+    padding: var(--fs-62) var(--fs-40) var(--fs-111);
+  }
+
+  h1 {
+    font-size: var(--fs-64);
+    line-height: var(--fs-64);
+    letter-spacing: -0.73px;
+    margin-bottom: var(--fs-28);
+  }
+
+  /* Blocks */
+  .header__presentation {
+    font-size: var(--fs-18);
+    line-height: var(--fs-28);
+  }
+
+  .main {
+    width: 92%;
+    margin: 0 auto var(--fs-64);
+    grid-template-columns: 64px repeat(4, minmax(10px, auto)) 58px;
+    grid-template-rows: 138px 150px 268px repeat(3, minmax(10px, auto));
+  }
+
+  .main__back {
+    width: 100%;
+    /* height: 600px;
+    padding: 0 var(--fs-48);
+    background-color: var(--clr-neutral-black);
+    border-radius: var(--fs-12); */
+  }
+
+  .back__img {
+    object-position: 100px -50px;
+  }
+
+  .main__phone {
+    /* min-width: 322px; */
+    max-width: 70%;
+    padding: 0;
+    margin: 0;
+    justify-self: flex-start;
+  }
+
+  /* Exceptions */
+  div[data-grid-item="back"] {
+    grid-column: 1 / 7;
+    grid-row: 2 / 5;
+  }
+  div[data-grid-item="phone"] {
+    grid-column: 2 / 4;
+    grid-row: 1 / 4;
+    z-index: 100;
+  }
+  section[data-grid-item="card"] {
+    grid-column: 3 / 5;
+    grid-row: 3 / 6;
+    z-index: 100;
+  }
+
+  /* MODIFY CARD */
 }

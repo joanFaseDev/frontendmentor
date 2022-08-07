@@ -67,29 +67,11 @@ Then crop/optimize/edit your image however you like, add it to your project, and
 
 ### What I learned
 
-Use this section to recap over some of your major learnings while working through this project. Writing these out and providing code samples of areas you want to highlight is a great way to reinforce your own knowledge.
+- Not think pixel perfect, at least not yet (more like in 5 years with tons of professional experience)
 
-To see how you can add code snippets, see below:
+- Use better naming convention for CUBE CSS, utilities named must describe what type of content they're used for.
 
-```html
-<h1>Some HTML code I'm proud of</h1>
-```
-
-```css
-.proud-of-this-css {
-  color: papayawhip;
-}
-```
-
-```js
-const proudOfThisFunc = () => {
-  console.log("🎉");
-};
-```
-
-If you want more help with writing markdown, we'd recommend checking out [The Markdown Guide](https://www.markdownguide.org/) to learn more.
-
-**Note: Delete this note and the content within this section and replace with your own learnings.**
+- Try to minimise as much as possible the layout's properties for mobile design because it's going to be override anyways once in desktop/tablet design.
 
 ### Continued development
 
