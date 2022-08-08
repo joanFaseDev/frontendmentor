@@ -73,6 +73,10 @@ Then crop/optimize/edit your image however you like, add it to your project, and
 
 - Try to minimise as much as possible the layout's properties for mobile design because it's going to be override anyways once in desktop/tablet design.
 
+QUESTIONS:
+
+- What is the minimum size to consider for a mobile design? Personnally, i don't work on design below 320 pixels but i was wondering if maybe i should set a lower range?
+
 ### Continued development
 
 Use this section to outline areas that you want to continue focusing on in future projects. These could be concepts you're still not completely comfortable with or techniques you found useful that you want to refine and perfect.
