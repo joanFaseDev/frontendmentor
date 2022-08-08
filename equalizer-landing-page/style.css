@@ -114,7 +114,9 @@ select {
   --fs-96: 6rem;
   --fs-98: 6.125rem;
   --fs-111: 6.9375rem;
+  --fs-127: 7.9375rem;
   --fs-138: 8.625rem;
+  --fs-165: 10.3125rem;
   --fw-400: 400;
   --fw-700: 700;
 
@@ -449,6 +451,49 @@ img[data-icon="social-media"]:hover {
     grid-column: 3 / 5;
     grid-row: 3 / 6;
   }
+}
 
-  /* MODIFY CARD */
+@media (min-width: 1000px) {
+  body {
+    background-position: top -2.5rem right 0;
+    background-size: auto 468px;
+  }
+
+  header {
+    --fs-65: var(--fs-127);
+    width: 81.5%;
+    padding: var(--fs-62) var(--fs-165) var(--fs-111);
+    margin: 0;
+  }
+
+  h1 {
+    font-size: var(--fs-88);
+    line-height: var(--fs-88);
+    letter-spacing: -1px;
+    margin-bottom: var(--fs-40);
+  }
+
+  .header__presentation {
+    font-size: var(--fs-20);
+    line-height: var(--fs-32);
+  }
+
+  .main {
+    width: 77%;
+    /* grid-template-rows:
+      minmax(10px, var(--fs-138)) minmax(10px, 150px) repeat(
+        2,
+        minmax(10px, auto)
+      )
+      minmax(10px, var(--fs-96));
+
+    grid-template-columns: var(--fs-64);
+    justify-items: start; */
+  }
+
+  .main__phone,
+  .main__card,
+  .main__back {
+    width: 100%;
+  }
 }
