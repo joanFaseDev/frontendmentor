@@ -152,7 +152,8 @@ html {
 body {
   font-size: var(--fs-body);
   background-image: url(./assets/bg-main-mobile.png);
-  background-position: center left;
+  background-repeat: no-repeat;
+  background-position: top -10rem left;
 }
 
 h1 {
@@ -362,10 +363,11 @@ img[data-icon="social-media"]:hover {
 /*Tablet Design*/
 @media (min-width: 600px) {
   body {
-    background-image: url(./assets/bg-pattern-1.svg);
-    background-repeat: no-repeat;
-    background-position: top -2rem right -2rem;
-    background-size: auto 400px;
+    background-image: url(./assets/bg-pattern-1.svg),
+      url(./assets/bg-main-mobile.png);
+    background-repeat: no-repeat, no-repeat;
+    background-position: top -2rem right -2rem, right -7rem top -10rem;
+    background-size: auto 400px, 100%;
   }
 
   /*Locally change some variable's value to indirectly modify some utility classes*/
@@ -462,8 +464,9 @@ img[data-icon="social-media"]:hover {
 
 @media (min-width: 1300px) {
   body {
-    background-position: top -3rem right 0;
-    background-size: auto 468px;
+    background-repeat: no-repeat, repeat;
+    background-position: top -3rem right 0, right 0 top 0;
+    background-size: auto 468px, 50% 50%;
   }
 
   header {
