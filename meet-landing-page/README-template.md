@@ -48,6 +48,8 @@ Then crop/optimize/edit your image however you like, add it to your project, and
 
 - **Group Chat for Everyone** part -> **header** element because it seems to be an introductory content. There's a logo, a quick description and two links: one to get the product, the second to learn more about it.
 
+- **Ways to add an image passed a certain breakpoint?** -> Created two html elements _picture_ and made one of them invisible using _display: none_ until the specific breakpoint is passed.
+
 ### Built with
 
 - Semantic HTML5 markup

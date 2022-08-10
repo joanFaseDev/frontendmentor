@@ -14,12 +14,64 @@
     <title>Frontend Mentor | Meet landing page</title>
   </head>
   <body>
-    Meet makes it easy to connect with others face-to-face virtually and
-    collaborate across any device. Download v1.3 What is it? 01 Built for modern
-    use Smarter meetings, all in one place Send messages, share files, show your
-    screen, and record your meetings — all in one workspace. Control who can
-    join with invite-only team access, data encryption, and data export. 02
-    Experience more together Stay connected with reliable HD meetings and
-    unlimited one-on-one and group video sessions. Download v1.3
+    <!-- Hero -->
+    <header class="hero">
+      <!-- Logo -->
+      <div class="[ hero__logo ] [ m-logo ]">
+        <img
+          class="[ logo ] [ m-center ]"
+          src="./assets/logo.svg"
+          alt="Meet's logo: two small circles, a green and a purple one, prefixing the word 'meet' written in lowercase."
+        />
+      </div>
+      <!-- Images -->
+      <picture class="hero__images">
+        <source
+          class="images__source"
+          srcset="./assets/desktop/image-hero-right.png"
+          media="(min-width: 600px)"
+        />
+        <img
+          class="[ faces ] [ hero-image-mobile ]"
+          src="./assets/tablet/image-hero.png"
+          alt="MDN"
+        />
+      </picture>
+      <picture class="hero__images" data-display="none">
+        <source
+          class="images__source"
+          srcset="./assets/desktop/image-hero-right.png"
+          media="(min-width: 600px)"
+        />
+        <img class="faces" src="./assets/tablet/image-hero.png" alt="MDN" />
+      </picture>
+      <!-- Text -->
+      <section class="[ hero__text ] [ m-hero-text text-center ]">
+        <h1 class="[ hero__title ] [ p-hero-title ]">
+          Group Chat for Everyone
+        </h1>
+        <p
+          class="[ hero__description ] [ p-hero-description m-hero-description ]"
+        >
+          Meet makes it easy to connect with others face-to-face virtually and
+          collaborate across any device.
+        </p>
+        <div class="[ hero__wrapper-buttons ]">
+          <button class="hero__button" data-color="green">
+            Download
+            <span class="button--span" data-color="cyan"> v1.3</span>
+          </button>
+        </div>
+        <div class="[ hero__wrapper-buttons ] [ m-hero-button ]">
+          <button class="hero__button" data-color="purple">What is it?</button>
+        </div>
+      </section>
+    </header>
+    01 Built for modern use Smarter meetings, all in one place Send messages,
+    share files, show your screen, and record your meetings — all in one
+    workspace. Control who can join with invite-only team access, data
+    encryption, and data export. 02 Experience more together Stay connected with
+    reliable HD meetings and unlimited one-on-one and group video sessions.
+    Download v1.3
   </body>
 </html>
