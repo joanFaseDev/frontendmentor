@@ -50,6 +50,8 @@ Then crop/optimize/edit your image however you like, add it to your project, and
 
 - **Ways to add an image passed a certain breakpoint?** -> Created two html elements _picture_ and made one of them invisible using _display: none_ until the specific breakpoint is passed.
 
+-**No footer element** -> one of the assets of this project is an image named 'image-footer' yet i didn't use a _footer_ element for it wasn't appropriate for the type of content in it.
+
 ### Built with
 
 - Semantic HTML5 markup

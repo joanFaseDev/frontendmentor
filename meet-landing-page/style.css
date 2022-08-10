@@ -85,6 +85,7 @@ select {
   --clr-cyan: #8fe3f9;
   --clr-black: #28283d;
   --clr-gray: #87879d;
+  --clr-gray-opacity: #86869c40;
   --clr-white: #fafafa;
 
   --ff-default: "Red Hat Display", sans-serif;
@@ -178,7 +179,7 @@ button {
 }
 
 .m-hero-button {
-  margin: 1rem auto 8.625rem;
+  margin: 1rem auto 4rem;
 }
 
 .m-logo {
@@ -201,9 +202,43 @@ button {
   text-align: center;
 }
 
+.flex-row {
+  display: flex;
+  flex-direction: row;
+}
+
 .flex-column {
   display: flex;
   flex-direction: column;
+}
+
+/* Blocks */
+.main__first {
+  width: 56px;
+  height: 140px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.first__container {
+  width: 28px;
+  height: 84px;
+}
+
+.first__number {
+  width: 56px;
+  height: 56px;
+  font-size: var(--fs-default);
+  font-weight: var(--fw-black);
+  line-height: var(--lh-body);
+  text-align: center;
+  padding: 1rem 0;
+  border: 1px solid var(--clr-gray-opacity);
+  border-radius: 100px;
+  color: var(--clr-gray);
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 /* Exceptions */
@@ -234,4 +269,8 @@ button {
 
 .button--span[data-color="cyan"] {
   color: var(--clr-cyan);
+}
+
+.first__container[data-border="right"] {
+  border-right: 1px solid var(--clr-gray-opacity);
 }
