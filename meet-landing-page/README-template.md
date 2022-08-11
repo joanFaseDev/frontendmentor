@@ -50,7 +50,9 @@ Then crop/optimize/edit your image however you like, add it to your project, and
 
 - **Ways to add an image passed a certain breakpoint?** -> Created two html elements _picture_ and made one of them invisible using _display: none_ until the specific breakpoint is passed.
 
--**No footer element** -> one of the assets of this project is an image named 'image-footer' yet i didn't use a _footer_ element for it wasn't appropriate for the type of content in it.
+- **No footer element** -> one of the assets of this project is an image named 'image-footer' yet i didn't use a _footer_ element for it wasn't appropriate for the type of content in it.
+
+- **Breakpoint max(300px) added** -> added a breakpoint for very small device. Essentially to change the photo's layout.
 
 ### Built with
 
@@ -67,29 +69,26 @@ Then crop/optimize/edit your image however you like, add it to your project, and
 
 ### What I learned
 
-Use this section to recap over some of your major learnings while working through this project. Writing these out and providing code samples of areas you want to highlight is a great way to reinforce your own knowledge.
-
-To see how you can add code snippets, see below:
-
-```html
-<h1>Some HTML code I'm proud of</h1>
-```
+- First time i use :is selector!
 
 ```css
-.proud-of-this-css {
-  color: papayawhip;
+:is(.hero__button, .exp__button)[data-color="purple"] {
+  background-color: var(--clr-purple-pale);
+}
+
+:is(.hero__button, .exp__button):is([data-color="green"], [data-color="purple"]) {
+  cursor: pointer;
+  transition: background-color 0.2s cubic-bezier(0, 0, 1, -0.18);
+}
+
+.hero__button[data-color="green"]:hover {
+  background-color: var(--clr-green-pale-hover);
+}
+
+:is(.hero__button, .exp__button)[data-color="purple"]:hover {
+  background-color: var(--clr-purple-pale-hover);
 }
 ```
-
-```js
-const proudOfThisFunc = () => {
-  console.log("🎉");
-};
-```
-
-If you want more help with writing markdown, we'd recommend checking out [The Markdown Guide](https://www.markdownguide.org/) to learn more.
-
-**Note: Delete this note and the content within this section and replace with your own learnings.**
 
 ### Continued development
 

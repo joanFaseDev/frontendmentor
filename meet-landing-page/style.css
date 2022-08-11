@@ -93,7 +93,7 @@ select {
   --fs-default: 16px;
   --fs-body: 1.125rem;
   --fs-h1: 2.5rem;
-  --fs-h2: 2.5rem;
+  --fs-h2: 2rem;
 
   --fw-light: 300;
   --fw-regular: 400;
@@ -103,7 +103,7 @@ select {
 
   --lh-body: 1.625rem;
   --lh-h1: 2.75rem;
-  --lh-h2: 2.75rem;
+  --lh-h2: 2.25rem;
   --lh-p: 1.625rem;
 
   --ls-overline: 0.25rem;
@@ -129,6 +129,7 @@ body {
 h1,
 h2 {
   color: var(--clr-black);
+  font-weight: var(--fw-black);
 }
 
 h1 {
@@ -168,6 +169,13 @@ button {
   object-fit: cover;
 }
 
+.main__photos {
+  margin: 4rem 1.5rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+}
+
 /* Utilities */
 
 .p-hero-title {
@@ -176,6 +184,10 @@ button {
 
 .p-hero-description {
   padding: 0 1.5rem;
+}
+
+.padding-smarter {
+  padding-inline: 1.5rem;
 }
 
 .m-hero-button {
@@ -194,12 +206,52 @@ button {
   margin: 1.5rem auto 2rem;
 }
 
+.m-smarter {
+  margin-bottom: 3.9375rem;
+}
+
+.m-smarter__title {
+  margin: 1.5rem 0 2rem;
+}
+
+.m-exp-title {
+  margin: 0 0 1.5rem 0;
+}
+
+.m-exp-description {
+  margin: 0 0 2rem 0;
+}
+
+.fs-exp-description {
+  font-size: var(--fs-body);
+}
+
 .m-center {
   margin: 0 auto;
 }
 
+.fw-black {
+  font-weight: var(--fw-black);
+}
+
+.clr-green-pale {
+  color: var(--clr-green-pale);
+}
+
+.clr-white {
+  color: var(--clr-white);
+}
+
+.ls-overline {
+  letter-spacing: 4px;
+}
+
 .text-center {
   text-align: center;
+}
+
+.text-upper {
+  text-transform: uppercase;
 }
 
 .flex-row {
@@ -216,6 +268,7 @@ button {
 .main__first {
   width: 56px;
   height: 140px;
+  margin: 0 auto;
   display: flex;
   flex-wrap: wrap;
 }
@@ -241,6 +294,16 @@ button {
   align-items: center;
 }
 
+.photo {
+  width: 45%;
+  border-radius: 0.5rem;
+}
+
+.main__exp {
+  background: linear-gradient(var(--clr-green-pale), var(--clr-green-pale));
+  padding: 5.75rem 1.5rem 4.5rem;
+}
+
 /* Exceptions */
 .hero__images[data-display="none"] {
   display: none;
@@ -249,12 +312,12 @@ button {
 .hero__button[data-color="green"] {
   background-color: var(--clr-green-pale);
 }
-.hero__button[data-color="purple"] {
+
+:is(.hero__button, .exp__button)[data-color="purple"] {
   background-color: var(--clr-purple-pale);
 }
 
-.hero__button[data-color="green"],
-.hero__button[data-color="purple"] {
+:is(.hero__button, .exp__button):is([data-color="green"], [data-color="purple"]) {
   cursor: pointer;
   transition: background-color 0.2s cubic-bezier(0, 0, 1, -0.18);
 }
@@ -263,7 +326,7 @@ button {
   background-color: var(--clr-green-pale-hover);
 }
 
-.hero__button[data-color="purple"]:hover {
+:is(.hero__button, .exp__button)[data-color="purple"]:hover {
   background-color: var(--clr-purple-pale-hover);
 }
 
