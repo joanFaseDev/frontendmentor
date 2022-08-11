@@ -367,3 +367,16 @@ button {
 .first__container[data-border="right"] {
   border-right: 1px solid var(--clr-gray-opacity);
 }
+
+/* For devices smaller than 350px viewport */
+@media (max-width: 350px) {
+  .main__photos {
+    justify-content: center;
+  }
+
+  .photo {
+    width: 100%;
+  }
+}
+
+/* For devices bigger than 600px viewport (tablet design) */
