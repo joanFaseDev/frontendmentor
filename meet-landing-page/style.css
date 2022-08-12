@@ -173,6 +173,7 @@ button {
 .main__photos {
   margin: 4rem 1.5rem;
   display: flex;
+  justify-content: space-evenly;
   flex-wrap: wrap;
   gap: 1.5rem;
 }
@@ -203,7 +204,7 @@ button {
   padding: 0 1.5rem;
 }
 
-.padding-smarter {
+.p-smarter {
   padding-inline: 1.5rem;
 }
 
@@ -462,6 +463,10 @@ button {
         var(--clr-green-pale-filter)
       ),
       url(./assets/tablet/image-footer.jpg);
+  }
+
+  .photo {
+    width: 25%;
   }
 }
 
