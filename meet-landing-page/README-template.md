@@ -38,14 +38,6 @@ Users should be able to:
 
 ## My process
 
-- **Group Chat for Everyone** part -> **header** element because it seems to be an introductory content. There's a logo, a quick description and two links: one to get the product, the second to learn more about it.
-
-- **Ways to add an image passed a certain breakpoint?** -> Created two html elements _picture_ and made one of them invisible using _display: none_ until the specific breakpoint is passed.
-
-- **No footer element** -> one of the assets of this project is an image named 'image-footer' yet i didn't use a _footer_ element for it wasn't appropriate for the type of content in it.
-
-- **Breakpoint max(300px) added** -> added a breakpoint for very small device. Essentially to change the photo's layout.
-
 ### Built with
 
 - Semantic HTML5 markup
@@ -53,15 +45,17 @@ Users should be able to:
 - Flexbox
 - CSS Grid
 - Mobile-first workflow
-- [React](https://reactjs.org/) - JS library
-- [Next.js](https://nextjs.org/) - React framework
-- [Styled Components](https://styled-components.com/) - For styles
-
-**Note: These are just examples. Delete this note and replace the list above with your own choices**
+- CUBE CSS
 
 ### What I learned
 
-- First time i use :is selector!
+- The importance of **building a solid and simple mobile design without complex layouts**. It makes all the follow up (tablet and desktop design) way more easier and natural.
+
+- The importance of **testing a project on multiple browsers**. I usually build my project through Firefox because i like its inspector mode but i had multiple alignment problems with my images, problems that showed on Internet Explorer and Chrome which i only noticed by chance at the end of the development.
+
+- The importance to **go beyond what is asked when it feels like it is needed**. I added a breakpoint for very small devices because the layout for the main's section images didn't felt right below 300px. I'll try to do the same for the next projects.
+
+- Also i used the _:is_ pseudo class for the first time and i really like it! Sure i used it poorly but i still won over a few lines of code as a result:
 
 ```css
 :is(.hero__button, .exp__button)[data-color="purple"] {
@@ -82,31 +76,13 @@ Users should be able to:
 }
 ```
 
-- Make a solid and simple mobile design without complex layouts makes all the follow up (tablet and desktop design) way more easier and natural.
-
 ### Continued development
 
-Use this section to outline areas that you want to continue focusing on in future projects. These could be concepts you're still not completely comfortable with or techniques you found useful that you want to refine and perfect.
+- I'm gonna take some time to practice different ways of handling images. I always had difficulties with CSS properties like _object-fit_, _object-position_, _background-size_, ... which i find strange because it doesn't feel that difficult. Yet the fact is i had troubles even in this project so practice it is!
 
-**Note: Delete this note and the content within this section and replace with your own plans for continued development.**
-
-### Useful resources
-
-- [Example resource 1](https://www.example.com) - This helped me for XYZ reason. I really liked this pattern and will use it going forward.
-- [Example resource 2](https://www.example.com) - This is an amazing article which helped me finally understand XYZ. I'd recommend it to anyone still learning this concept.
-
-**Note: Delete this note and replace the list above with resources that helped you during the challenge. These could come in handy for anyone viewing your solution or for yourself when you look back on this project in the future.**
+- I'm gonna keep using that mobile first workflow. I'm quite satisfied with the way i worked on that project. It felt way more natural than the previous one and i think the biggest reason is that i didn't overcomplicated the mobile design. Just kept it simple and solid.
 
 ## Author
 
-- Website - [Add your name here](https://www.your-site.com)
-- Frontend Mentor - [@yourusername](https://www.frontendmentor.io/profile/yourusername)
-- Twitter - [@yourusername](https://www.twitter.com/yourusername)
-
-**Note: Delete this note and add/remove/edit lines above based on what links you'd like to share.**
-
-## Acknowledgments
-
-This is where you can give a hat tip to anyone who helped you out on this project. Perhaps you worked in a team or got some inspiration from someone else's solution. This is the perfect place to give them some credit.
-
-**Note: Delete this note and edit this section's content as necessary. If you completed this challenge by yourself, feel free to delete this section entirely.**
+- Frontend Mentor - [@joanFaseDev](https://www.frontendmentor.io/profile/joanFaseDev)
+- Frontend Mentor Projects - [all my projects from frontendmentor.io](https://github.com/joanFaseDev/frontendmentor)
