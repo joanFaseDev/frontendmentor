@@ -15,7 +15,7 @@
   </head>
   <body>
     <!-- Hero -->
-    <header class="hero">
+    <header class="[ hero ] [ max-width ]">
       <!-- Logo -->
       <div class="[ hero__logo ] [ m-logo ]">
         <img
@@ -24,55 +24,68 @@
           alt="Meet's logo: two small circles, a green and a purple one, prefixing the word 'meet' written in lowercase."
         />
       </div>
-      <!-- Images -->
-      <picture class="hero__images">
-        <source
-          class="images__source"
-          srcset="./assets/tablet/image-hero.png"
-          media="(min-width: 600px)"
-        />
-        <img
-          class="[ faces ] [ hero-image-mobile ]"
-          src="./assets/tablet/image-hero.png"
-          alt="MDN"
-        />
-      </picture>
-      <picture class="hero__images" data-display="none">
-        <source
-          class="images__source"
-          srcset="./assets/desktop/image-hero-right.png"
-          media="(min-width: 600px)"
-        />
-        <img class="faces" src="./assets/tablet/image-hero.png" alt="MDN" />
-      </picture>
-      <!-- Text -->
-      <section class="[ hero__text ] [ m-hero-text text-center ]">
-        <h1 class="[ hero__title ] [ p-hero-title ]">
-          Group Chat for Everyone
-        </h1>
-        <p
-          class="[ hero__description ] [ p-hero-description m-hero-description ]"
+      <!-- Grid Container -->
+      <div class="[ hero__grid ] [ m-hero-grid ]">
+        <!-- Images -->
+        <picture class="[ hero__images ] [ order-1 ]" data-align="left">
+          <source
+            class="images__source"
+            srcset="./assets/desktop/image-hero-left.png"
+            media="(min-width: 1000px)"
+          />
+          <img
+            class="[ faces ] [ hero-image-mobile ]"
+            src="./assets/tablet/image-hero.png"
+            alt="MDN"
+          />
+        </picture>
+        <picture
+          class="[ hero__images ] [ order-3 ]"
+          data-align="right"
+          data-display="none"
         >
-          Meet makes it easy to connect with others face-to-face virtually and
-          collaborate across any device.
-        </p>
-        <!-- Buttons -->
-        <div class="[ hero__container ]">
-          <div class="[ hero__wrapper-buttons ]">
-            <button class="hero__button" data-color="green">
-              Download
-              <span class="button--span" data-color="cyan"> v1.3</span>
-            </button>
+          <source
+            class="images__source"
+            srcset="./assets/desktop/image-hero-right.png"
+            media="(min-width: 1000px)"
+          />
+          <img
+            class="[ faces ] [ hero-image-mobile ]"
+            src="./assets/tablet/image-hero.png"
+            alt="MDN"
+          />
+        </picture>
+        <!-- Text -->
+        <section
+          class="[ hero__text ] [ width-hero-text m-hero-text text-center order-2 bg-hero-text ]"
+        >
+          <h1 class="[ hero__title ] [ p-hero-title m-hero-title ]">
+            Group Chat for Everyone
+          </h1>
+          <p
+            class="[ hero__description ] [ p-hero-description m-hero-description ]"
+          >
+            Meet makes it easy to connect with others face-to-face virtually and
+            collaborate across any device.
+          </p>
+          <!-- Buttons -->
+          <div class="[ hero__container ] [ m-hero-container ]">
+            <div class="[ hero__wrapper-buttons ]">
+              <button class="hero__button" data-color="green">
+                Download
+                <span class="button--span" data-color="cyan"> v1.3</span>
+              </button>
+            </div>
+            <div class="[ hero__wrapper-buttons ] [ m-hero-button ]">
+              <button class="hero__button" data-color="purple">
+                What is it?
+              </button>
+            </div>
           </div>
-          <div class="[ hero__wrapper-buttons ] [ m-hero-button ]">
-            <button class="hero__button" data-color="purple">
-              What is it?
-            </button>
-          </div>
-        </div>
-      </section>
+        </section>
+      </div>
     </header>
-    <main class="main">
+    <main class="[ main ] [ max-width-hero ]">
       <!-- First Component -->
       <div class="main__first">
         <div class="[ wrapper ] [ flex-row ]">
@@ -120,7 +133,7 @@
         </p>
       </section>
       <!-- Container Second Section -->
-      <div class="[ main__container ]">
+      <div class="[ main__container ] [ max-width m-center ]">
         <!-- Second Component -->
         <div class="[ main__first ] [ grid-first ]">
           <div class="[ wrapper ] [ flex-row ]">
