@@ -1,0 +1,4 @@
+/* Exceptions */
+.is-valid:invalid {
+  border: 2px solid red;
+}
